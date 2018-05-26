@@ -7,7 +7,7 @@ import Subscribe from '../components/home/subscribe'
 export default () => (
   <Page>
     <Hero
-      title='Données Adresse Ouverte'
+      title='Données Adresse ouvertes'
       tagline='Un référentiel national ouvert : de l’adresse à la coordonnée géographique' />
 
     <Pitch />
