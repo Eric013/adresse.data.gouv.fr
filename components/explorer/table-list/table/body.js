@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 function fadeOut(wrapped, idx) {
   return wrapped && idx === 8 ? 'fade-out' : ''
 }
@@ -24,18 +22,21 @@ const Body = ({items, wrapped, selected, handleSelect}) => (
       </tr>
     ))}
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       td {
-        border: 1px solid ${theme.border};
+        border: 1px solid $border;
         padding: 8px;
       }
 
       tr:nth-child(even) {
-        background-color: ${theme.backgroundGrey};
+        background-color: $backgroundGrey;
       }
 
       tr:hover {
         cursor: pointer;
-        background-color: ${theme.colors.lightGrey};
+        background-color: $lightGrey;
       }
 
       tr.fade-out {
@@ -43,12 +44,12 @@ const Body = ({items, wrapped, selected, handleSelect}) => (
       }
 
       tr.fade-out td {
-        border: 1px dotted ${theme.border};
+        border: 1px dotted $border;
       }
 
       tr.isSelected {
-        background-color: ${theme.primaryDark};
-        color: ${theme.colors.white};
+        background-color: $primaryDark;
+        color: $white;
       }
       `}</style>
   </tbody>

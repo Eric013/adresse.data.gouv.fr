@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../../styles/theme'
-
 const types = {
   locality: 'Lieu-dit',
   street: 'Voie',
@@ -22,10 +20,12 @@ const PopupAddress = ({address}) => {
       </div>
 
       <style jsx>{`
+        @import 'theme';
+
         .divider {
           width: 50%;
           margin: 1.2em auto;
-          border-top: 1px solid ${theme.borderLighter};
+          border-top: 1px solid $borderLighter;
         }
 
         .popup {
@@ -38,7 +38,7 @@ const PopupAddress = ({address}) => {
           max-width: 90%;
           transform: translate(-50%);
           background: #ffffffc0;
-          border: 1px solid ${theme.border};
+          border: 1px solid $border;
         }
 
         @media (max-width: 700px) {
@@ -49,7 +49,7 @@ const PopupAddress = ({address}) => {
             border: none;
             min-width: 100%;
             transform: none;
-            border-top: 1px solid ${theme.border};
+            border-top: 1px solid $border;
           }
         }
       `}</style>

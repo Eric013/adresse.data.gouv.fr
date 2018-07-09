@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import theme from '../styles/theme'
-
 const Footer = () => (
   <footer className='footer'>
     <div className='container'>
@@ -22,9 +20,11 @@ const Footer = () => (
       </ul>
     </div>
     <style jsx>{`
+      @import 'colors';
+
       .footer {
-        background: ${theme.colors.almostBlack};
-        color: ${theme.colors.white};
+        background: $almostBlack;
+        color: $white;
         padding: 2em 0;
         line-height: 2em;
       }
@@ -64,7 +64,7 @@ const Footer = () => (
       }
 
       .footer__links a {
-        color: ${theme.colors.white};
+        color: $white;
         text-decoration: none;
       }
 

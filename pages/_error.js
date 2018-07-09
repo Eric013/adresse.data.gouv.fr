@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 import Meta from '../components/meta'
 import Page from '../layouts/main'
 
@@ -45,6 +43,8 @@ class ErrorPage extends React.Component {
         </div>
 
         <style jsx>{`
+          @import 'theme';
+
           div {
             margin: 7em 15px 2em;
             text-align: center;
@@ -52,7 +52,7 @@ class ErrorPage extends React.Component {
 
           section {
             padding: 2em;
-            box-shadow: 0 1px 4px ${theme.boxShadow};
+            box-shadow: 0 1px 4px $boxShadow;
           }
 
           h1 {

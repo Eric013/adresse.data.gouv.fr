@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 import Container from './container'
 
 const Section = ({title, subtitle, children, background, centered}) => (
@@ -14,29 +12,31 @@ const Section = ({title, subtitle, children, background, centered}) => (
     </Container>
 
     <style jsx>{`
+      @import 'theme';
+
       section {
         padding: 3em 0;
         ${centered && 'text-align: center;'}
       }
 
       .section-white {
-        background-color: ${theme.backgroundWhite};
-        color: ${theme.colors.black};
+        background-color: $backgroundWhite;
+        color: $black;
       }
 
       .section-grey {
-        background-color: ${theme.backgroundGrey};
-        color: ${theme.colors.black};
+        background-color: $backgroundGrey;
+        color: $black;
       }
 
       .section-dark {
-        background-color: ${theme.backgroundDark};
-        color: ${theme.colors.white};
+        background-color: $backgroundDark;
+        color: $white;
       }
 
       .section-color {
-        background-color: ${theme.backgroundColor};
-        color: ${theme.colors.white};
+        background-color: $backgroundColor;
+        color: $white;
       }
 
       h2 {
@@ -54,7 +54,7 @@ const Section = ({title, subtitle, children, background, centered}) => (
       }
 
       .section-white p {
-        color: ${theme.secondary};
+        color: $secondary;
       }
 
       h2 + p {

@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../../styles/theme'
-
 const ColumnsSelect = ({columns, selectedColumns, onAdd, onRemove}) => (
   <div>
     <div className='columns'>
@@ -22,6 +20,9 @@ const ColumnsSelect = ({columns, selectedColumns, onAdd, onRemove}) => (
       ))}
     </div>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .columns {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
@@ -32,7 +33,7 @@ const ColumnsSelect = ({columns, selectedColumns, onAdd, onRemove}) => (
         display: flex;
         align-items: center;
         justify-content: space-between;
-        border: 1px solid ${theme.colors.lightGrey};
+        border: 1px solid $lightGrey;
       }
 
       .item:hover {
@@ -54,8 +55,8 @@ const ColumnsSelect = ({columns, selectedColumns, onAdd, onRemove}) => (
         font-weight: bold;
         text-align: center;
         width: 20px;
-        color: ${theme.colors.white};
-        background-color: ${theme.backgroundColor};
+        color: $white;
+        background-color: $backgroundColor;
       }
       `}</style>
   </div>

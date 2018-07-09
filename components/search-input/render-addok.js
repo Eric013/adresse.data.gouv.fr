@@ -1,5 +1,3 @@
-import theme from '../../styles/theme'
-
 const featuresTypes = {
   housenumber: 'Numéro',
   street: 'Rue',
@@ -16,8 +14,8 @@ function renderHeader(header) {
       <div key={header} className='header'>{featuresTypes[header]}</div>
       <style jsx>{`
           .header {
-            background-color: ${theme.colors.grey};
-            color: ${theme.colors.white};
+            background-color: $grey;
+            color: $white;
             padding: 0.2em;
           }
         `}
@@ -41,6 +39,9 @@ function renderItem(item, isHighlighted) {
         }
       </div>
       <style jsx>{`
+        @import 'theme';
+        @import 'colors';
+
         .item {
           display: flex;
           flex-flow: row;
@@ -58,8 +59,8 @@ function renderItem(item, isHighlighted) {
         }
 
         .item-highlighted {
-          background-color: ${theme.primary};
-          color: ${theme.colors.white};
+          background-color: $primary;
+          color: $white;
         }
         `}</style>
     </div>

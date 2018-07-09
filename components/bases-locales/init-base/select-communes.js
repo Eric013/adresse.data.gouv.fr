@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../styles/theme'
-
 class SelectCommune extends React.Component {
   static propTypes = {
     communes: PropTypes.array.isRequired,
@@ -22,43 +20,46 @@ class SelectCommune extends React.Component {
           ))}
         </div>
         <style jsx>{`
-      .communes {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
-        grid-gap: 5px;
-      }
+          @import 'theme';
+          @import 'colors';
 
-      .item {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        border: 1px solid ${theme.colors.lightGrey};
-        white-space: nowrap;
-        width: 100%;
-      }
+          .communes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(auto, 200px));
+            grid-gap: 5px;
+          }
 
-      .item:hover {
-        cursor: pointer;
-      }
+          .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid $lightGrey;
+            white-space: nowrap;
+            width: 100%;
+          }
 
-      .commune {
-        margin: 0 1em;
-      }
+          .item:hover {
+            cursor: pointer;
+          }
 
-      .selection {
-        margin: 2em 0;
-        padding: 0.5em;
-        border: 1px dashed #ccc;
-      }
+          .commune {
+            margin: 0 1em;
+          }
 
-       .button {
-        font-size: larger;
-        font-weight: bold;
-        text-align: center;
-        width: 20px;
-        color: ${theme.colors.white};
-        background-color: ${theme.backgroundColor};
-      }
+          .selection {
+            margin: 2em 0;
+            padding: 0.5em;
+            border: 1px dashed #ccc;
+          }
+
+          .button {
+            font-size: larger;
+            font-weight: bold;
+            text-align: center;
+            width: 20px;
+            color: $white;
+            background-color: $backgroundColor;
+          }
       `}</style>
       </div>
     )

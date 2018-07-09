@@ -3,8 +3,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import {Marker} from 'react-mapbox-gl'
 
-import theme from '../../styles/theme'
-
 import Loader from '../loader'
 
 import CenteredMap from './centered-map'
@@ -99,6 +97,8 @@ class AddressMap extends React.Component {
         }
 
         <style jsx>{`
+          @import 'theme';
+
           .centered {
             position: absolute;
             top: 50%;
@@ -117,7 +117,7 @@ class AddressMap extends React.Component {
             content: "";
             position: absolute;
             z-index: 1;
-            background: ${theme.border};
+            background: $border;
           }
 
           .map-center:before {

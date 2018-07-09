@@ -4,8 +4,6 @@ import PropTypes from 'prop-types'
 
 import Loader from '../loader'
 
-import theme from '../../styles/theme'
-
 class SearchInput extends React.Component {
   constructor(props) {
     super(props)
@@ -35,9 +33,12 @@ class SearchInput extends React.Component {
         {/* disable safari zoom in on focus with font-size at 16px */}
         <input style={{fontSize: '16px'}} className='search' {...props} placeholder={placeholder} />
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .search {
-            background-color: ${theme.colors.white};
-            border: 1px solid ${theme.border};
+            background-color: $white;
+            border: 1px solid $border;
             border-radius: 2px 2px 2px 2px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
             color: rgba(0, 0, 0, 0.75);
@@ -64,14 +65,17 @@ class SearchInput extends React.Component {
           <div className='item'>Aucun résultat</div>
         ) : items}
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .menu {
             position: absolute;
-            box-shadow: 0 1px 4px ${theme.boxShadow};
+            box-shadow: 0 1px 4px $boxShadow;
             z-index: 1;
             width: 100%;
-            background-color: ${theme.colors.white};
-            border: 1px solid ${theme.border};
-            color: ${theme.colors.black};
+            background-color: $white;
+            border: 1px solid $border;
+            color: $black;
             border-radius: 0 0 5px 5px;
           }
 

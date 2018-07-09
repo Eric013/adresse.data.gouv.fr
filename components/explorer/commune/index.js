@@ -1,7 +1,5 @@
 import React from 'react'
 
-import theme from '../../../styles/theme'
-
 import Head from './head'
 import Codes from './codes'
 import Metrics from './metrics'
@@ -21,9 +19,12 @@ const Commune = props => (
     </div>
 
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .head {
-        background-color: ${theme.primary};
-        color: ${theme.colors.white};
+        background-color: $primary;
+        color: $white;
       }
 
       .map {

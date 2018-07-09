@@ -8,8 +8,6 @@ import MainPage from '../../layouts/main'
 
 import Notification from '../notification'
 
-import theme from '../../styles/theme'
-
 const MapError = () => (
   <MainPage>
     <Meta title='Attention' description='L’accélération matérielle n’est pas activée sur votre navigateur' />
@@ -25,16 +23,17 @@ const MapError = () => (
     </div>
 
     <style jsx>{`
-          .webgl-error {
-            margin: 100px auto;
-            width: 80%;
-          }
+      @import 'theme';
+      .webgl-error {
+        margin: 100px auto;
+        width: 80%;
+      }
 
-          a {
-            text-decoration: underline;
-            color: ${theme.warningBorder};
-          }
-        `}</style>
+      a {
+        text-decoration: underline;
+        color: $warningBorder;
+      }
+    `}</style>
   </MainPage>
 )
 

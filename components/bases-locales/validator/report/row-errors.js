@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 const RowErrors = ({errors, field}) => (
   <div className='abnormalities'>
     <h3>Anomalie{errors.length > 1 ? 's' : ''} :</h3>
@@ -12,6 +10,9 @@ const RowErrors = ({errors, field}) => (
         </div>))}
     </div>
     <style>{`
+      @import 'theme';
+      @import 'colors';
+
       .abnormalities {
         display: flex;
         flex-flow: wrap;
@@ -24,12 +25,12 @@ const RowErrors = ({errors, field}) => (
         padding: 0.5em;
         margin: 0.5em 0;
         border-radius: 3px;
-        background: ${theme.errorBg};
+        background: $errorBg;
       }
 
       .field.select {
-        background: ${theme.errorBorder};
-        color: ${theme.colors.white};
+        background: $errorBorder;
+        color: $white;
       }
       `}</style>
   </div>

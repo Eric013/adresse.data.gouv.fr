@@ -4,8 +4,6 @@ import MdClose from 'react-icons/lib/md/close'
 import Tag from '../../tag'
 import Notification from '../../notification'
 
-import theme from '../../../styles/theme'
-
 const DISTANCE_MAX_POSITION = 15
 
 const Address = ({voie, address, onClose}) => {
@@ -82,6 +80,9 @@ const Address = ({voie, address, onClose}) => {
           null
       }
       <style jsx>{`
+        @import 'theme';
+        @import 'colors';
+
         .flex-list{
           display: flex;
           flex-flow: wrap;
@@ -90,7 +91,7 @@ const Address = ({voie, address, onClose}) => {
 
         .head {
           align-items: baseline;
-          border-bottom: 1px solid ${theme.colors.lighterGrey};
+          border-bottom: 1px solid $lighterGrey;
         }
 
         .close {
@@ -99,7 +100,7 @@ const Address = ({voie, address, onClose}) => {
         }
 
         .close:hover {
-          color:  ${theme.primary};
+          color:  $primary;
           cursor: pointer;
         }
 
@@ -114,8 +115,8 @@ const Address = ({voie, address, onClose}) => {
         .parcelle {
           padding: 0.3em 0.5em;
           margin: 2px;
-          background-color: ${theme.colors.lighterBlue};
-          border: 1px solid ${theme.primary};
+          background-color: $lighterBlue;
+          border: 1px solid $primary;
         }
 
         .position {
@@ -128,7 +129,7 @@ const Address = ({voie, address, onClose}) => {
         .source {
           grid-column: 1;
           text-align: center;
-          background-color: ${theme.colors.lighterGrey};
+          background-color: $lighterGrey;
          }
 
         .coordinates {
@@ -142,7 +143,7 @@ const Address = ({voie, address, onClose}) => {
         .coordinate {
           align-self: center;
           padding: 5px;
-          background-color: ${theme.colors.lightGrey};
+          background-color: $lightGrey;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;

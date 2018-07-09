@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../styles/theme'
-
 import Notification from '../../notification'
 
 import BaseAdresseLocale from './base-adresse-locale'
@@ -34,8 +32,8 @@ class BasesAdresseLocales extends React.Component {
 
           .tag {
             display: inline;
-            background-color: ${theme.primary};
-            color: ${theme.colors.white};
+            background-color: $primary;
+            color: $white;
             padding: .2em .6em .3em;
             font-size: 75%;
             font-weight: 700;

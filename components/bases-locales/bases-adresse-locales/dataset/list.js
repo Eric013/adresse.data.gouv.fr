@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FaSearch from 'react-icons/lib/fa/search'
 
-import theme from '../../../../styles/theme'
-
 class Preview extends React.Component {
   static propTypes = {
     list: PropTypes.array.isRequired,
@@ -46,6 +44,8 @@ class Preview extends React.Component {
         </div>
 
         <style jsx>{`
+          @import 'colors';
+
           input {
             margin: 0.5em 0;
           }
@@ -60,10 +60,10 @@ class Preview extends React.Component {
 
           span {
             position: absolute;
-            top: 22px;
+            top: 1em;
             left: 1em;
             font-size: 15px;
-            color: ${theme.colors.darkGrey};
+            color: $darkGrey;
           }
 
           .table {

@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 import TagsInput from './tags-input'
 
 class TableList extends React.Component {
@@ -55,39 +53,41 @@ class TableList extends React.Component {
         </div>
 
         <style jsx>{`
+          @import 'theme';
+
+          .filter-1 {
+            display: flex;
+          }
+
+          .filter-1 .tags {
+            margin-left: 1em;
+          }
+
+          .tags {
+            width: 100%;
+            border: 1px solid $lightGrey;
+          }
+
+          .destination {
+            margin: 5px 0;
+          }
+
+          @media (max-width: 700px) {
             .filter-1 {
               display: flex;
+              flex-direction: column;
             }
 
             .filter-1 .tags {
-              margin-left: 1em;
+              margin: 5px 0 0 0;
             }
 
             .tags {
               width: 100%;
-              border: 1px solid ${theme.colors.lightGrey};
-            }
-
-            .destination {
               margin: 5px 0;
             }
-
-            @media (max-width: 700px) {
-              .filter-1 {
-                display: flex;
-                flex-direction: column;
-              }
-
-              .filter-1 .tags {
-                margin: 5px 0 0 0;
-              }
-
-              .tags {
-                width: 100%;
-                margin: 5px 0;
-              }
-            }
-          `}</style>
+          }
+      `}</style>
       </div>
     )
   }

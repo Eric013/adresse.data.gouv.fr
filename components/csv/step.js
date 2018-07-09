@@ -1,16 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../styles/theme'
-
 const Step = ({title, children}) => {
   return (
     <div>
       <h2 className={`${children ? '' : 'disabled'}`}>{title}</h2>
       {children}
       <style jsx>{`
+        @import 'colors';
+
         .disabled {
-          color: ${theme.colors.lightGrey}
+          color: $lightGrey;
         }
       `}</style>
     </div>

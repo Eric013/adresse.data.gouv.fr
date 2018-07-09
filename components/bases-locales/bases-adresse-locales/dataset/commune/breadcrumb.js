@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import FaAngleRight from 'react-icons/lib/fa/angle-right'
 
-import theme from '../../../../../styles/theme'
-
 class Breadcrumb extends React.Component {
   static propTypes = {
     current: PropTypes.string.isRequired,
@@ -26,6 +24,8 @@ class Breadcrumb extends React.Component {
         ))}
         {current}
         <style jsx>{`
+          @import 'theme';
+
           .breadcrumb {
             display: flex;
             align-items: center;
@@ -34,7 +34,7 @@ class Breadcrumb extends React.Component {
           }
 
           a {
-            color: ${theme.darkText};
+            color: $darkText;
             text-decoration: none;
           }
 

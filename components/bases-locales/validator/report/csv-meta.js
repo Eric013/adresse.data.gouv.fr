@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 import FaCheck from 'react-icons/lib/fa/check'
 import FaClose from 'react-icons/lib/fa/close'
 
-import theme from '../../../../styles/theme'
-
 const CsvMeta = ({name, value, isValid}) => {
   return (
     <div>
@@ -13,18 +11,20 @@ const CsvMeta = ({name, value, isValid}) => {
       </div>
       <div>{value}</div>
       <style jsx>{`
+        @import 'colors';
+
         .item {
           display: flex;
         }
 
         .check {
           margin-left: 1em;
-          color: ${theme.colors.green};
+          color: $green;
         }
 
         .error {
           margin-left: 1em;
-          color: ${theme.colors.red};
+          color: $red;
         }
         `}</style>
     </div>

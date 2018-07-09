@@ -1,8 +1,6 @@
 import Link from 'next/link'
 import Section from '../section'
 
-import theme from '../../styles/theme'
-
 export default () => (
   <Section
     background='color'
@@ -31,6 +29,8 @@ export default () => (
     </div>
 
     <style jsx>{`
+      @import 'theme';
+
       .main {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
@@ -44,7 +44,7 @@ export default () => (
       }
 
       i {
-        color: ${theme.colors.white};
+        color: $white;
       }
 
       a, .muted {
@@ -54,7 +54,7 @@ export default () => (
         text-transform: uppercase;
         text-decoration: none;
         font-weight: 700;
-        color: ${theme.backgroundWhite};
+        color: $backgroundWhite;
       }
 
       img {

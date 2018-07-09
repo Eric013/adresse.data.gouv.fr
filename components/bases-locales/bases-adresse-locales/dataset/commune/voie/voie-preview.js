@@ -3,8 +3,6 @@ import PropTypes from 'prop-types'
 
 import {spaceThousands} from '../../../../../../lib/format-numbers'
 
-import theme from '../../../../../../styles/theme'
-
 import Notification from '../../../../../notification'
 import Tag from '../../../../../tag'
 
@@ -79,13 +77,16 @@ class VoiePreview extends React.Component {
         }
 
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .container {
             margin: 1em 0;
           }
 
           h4 {
-            background-color: ${theme.primary};
-            color: ${theme.colors.white};
+            background-color: $primary;
+            color: $white;
             padding: 1em;
             margin-bottom: 0;
           }

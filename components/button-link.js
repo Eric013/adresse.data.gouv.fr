@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 const ButtonLink = ({children, ...props}) => (
   <a className='button' {...props}>
     {children}
 
     <style jsx>{`
+      @import 'theme';
+
       a.button,
       a.button:focus,
       a.button:active,
@@ -18,10 +18,10 @@ const ButtonLink = ({children, ...props}) => (
         display: inline-block;
         margin: 0 auto;
         padding: 0.5em 3em;
-        color: ${theme.colors.white};
-        background-color: ${theme.secondary};
-        border-bottom: 1px solid ${theme.border};
-        border-radius: ${theme.borderRadius};
+        color: $white;
+        background-color: $secondary;
+        border-bottom: 1px solid $border;
+        border-radius: $borderRadius;
         box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.3);
         border: 1px solid transparent;
         font-family: "Evolventa", "Trebuchet MS", sans-serif;
@@ -35,7 +35,7 @@ const ButtonLink = ({children, ...props}) => (
       a.button:hover,
       button.button:hover {
         text-decoration: none;
-        box-shadow: inset 0 0 0 2em ${theme.secondaryDarken};
+        box-shadow: inset 0 0 0 2em $secondaryDarken;
       }
 
       a.button:active,

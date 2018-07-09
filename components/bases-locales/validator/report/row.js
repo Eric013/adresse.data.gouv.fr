@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 import Line from './line'
 import RowErrors from './row-errors'
 
@@ -48,6 +46,8 @@ class Row extends React.Component {
           </div>}
 
         <style jsx>{`
+          @import 'theme';
+
           .line {
             display: flex;
             align-items: center;
@@ -58,7 +58,7 @@ class Row extends React.Component {
           }
 
           .error {
-            color: ${theme.errorBorder};
+            color: $errorBorder;
           }
 
           .error:hover {
@@ -69,11 +69,11 @@ class Row extends React.Component {
           .container {
             margin: 1em 0;
             padding: 1em;
-            box-shadow: 0 1px 4px ${theme.boxShadow};
+            box-shadow: 0 1px 4px $boxShadow;
           }
 
           span {
-            color: ${theme.darkText};
+            color: $darkText;
             text-decoration: italic;
           }
           `}</style>

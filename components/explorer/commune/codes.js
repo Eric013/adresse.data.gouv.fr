@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../styles/theme'
-
 const Codes = ({code, codesPostaux, departement, region}) => (
   <div className='codes'>
     <div><b>Code commune</b> : {code}</div>
@@ -18,12 +16,15 @@ const Codes = ({code, codesPostaux, departement, region}) => (
     <div><b>Département</b> : {departement.nom} ({departement.code})</div>
     <div><b>Région</b> : {region.nom} ({region.code})</div>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .codes {
         display: grid;
         text-align: center;
         grid-template-columns: repeat(4, 1fr);
-        background-color: ${theme.primary};
-        color: ${theme.colors.white};
+        background-color: $primary;
+        color: $white;
         margin-top: -1em;
         padding: 1em 2em;
       }

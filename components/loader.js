@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 const Loader = ({size}) => (
   <div className={`loader ${size}`}>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .loader {
         margin-left: 20px;
         border-radius: 50%;
@@ -12,24 +13,24 @@ const Loader = ({size}) => (
       }
 
       .small {
-        border: 2px solid ${theme.colors.white};
-        border-top: 2px solid #3498db; /* Blue */
+        border: 2px solid $white;
+        border-top: 2px solid $primary;
         width: 20px;
         min-width: 20px;
         height: 20px;
       }
 
       .regular {
-        border: 4px solid ${theme.colors.white};
-        border-top: 4px solid #3498db; /* Blue */
+        border: 4px solid $white;
+        border-top: 4px solid $primary;
         width: 40px;
         height: 40px;
       }
 
 
       .big {
-        border: 5px solid ${theme.colors.white};
-        border-top: 5px solid #3498db; /* Blue */
+        border: 5px solid $white;
+        border-top: 5px solid $primary;
         width: 60px;
         height: 60px;
       }

@@ -1,8 +1,6 @@
 import React, {Fragment} from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 class LineValue extends React.Component {
   constructor(props) {
     super(props)
@@ -36,22 +34,24 @@ class LineValue extends React.Component {
           <td className='valid'>{value.rawValue}</td>
         }
         <style jsx>{`
+          @import 'theme';
+
           td {
             padding: 0.5em;
           }
 
           td.error {
-            background: ${theme.errorBg};
+            background: $errorBg;
           }
 
           td.error:hover {
             cursor: pointer;
-            background: ${theme.errorBorder};
-            color: ${theme.colors.white};
+            background: $errorBorder;
+            color: $white;
           }
 
           td.valid {
-            background: ${theme.successBg};
+            background: $successBg;
           }
           `}</style>
       </Fragment>

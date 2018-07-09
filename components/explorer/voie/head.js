@@ -2,8 +2,6 @@ import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-import theme from '../../../styles/theme'
-
 const Head = ({commune, nomVoie}) => {
   const {nom, code, departement} = commune
   return (
@@ -14,12 +12,14 @@ const Head = ({commune, nomVoie}) => {
       </div>
       <h4>{departement.nom} ({departement.code})</h4>
       <style jsx>{`
+        @import 'colors';
+
         .head {
           display: flex;
           justify-content: space-between;
           flex-flow: wrap;
           align-items: center;
-          border-bottom: 2px solid ${theme.colors.black};
+          border-bottom: 2px solid $black;
           margin: 2em 0;
         }
 

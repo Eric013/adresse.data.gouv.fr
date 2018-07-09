@@ -5,8 +5,6 @@ import FaClose from 'react-icons/lib/fa/close'
 import FaCheck from 'react-icons/lib/fa/check'
 import FaExclamationTriangle from 'react-icons/lib/fa/exclamation-triangle'
 
-import theme from '../../../../styles/theme'
-
 const fieldToFind = [
   'cle_interop',
   'uid_adresse',
@@ -46,6 +44,9 @@ const KnownFields = ({found, alias}) => (
       )}
     </tbody>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .container {
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(300px, 1fr));
@@ -53,19 +54,19 @@ const KnownFields = ({found, alias}) => (
       }
 
       .found {
-        color: ${theme.successBorder};
+        color: $successBorder;
       }
 
       .not-found {
-        color: ${theme.errorBorder};
+        color: $errorBorder;
       }
 
       .warning {
-        color: ${theme.warningBorder};
+        color: $warningBorder;
       }
 
       .message {
-        background-color: ${theme.colors.white};
+        background-color: $white;
       }
 
       th, td {
@@ -73,7 +74,7 @@ const KnownFields = ({found, alias}) => (
       }
 
       tr:nth-child(2n) {
-        background-color: ${theme.backgroundGrey};
+        background-color: $backgroundGrey;
       }
 
       td:nth-child(2n) {

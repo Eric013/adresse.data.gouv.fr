@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../styles/theme'
-
 class Info extends React.Component {
   static propTypes = {
     title: PropTypes.string.isRequired,
@@ -24,11 +22,13 @@ class Info extends React.Component {
         <b>{title} : </b>
         <span className={type}>{children}</span>
         <style jsx>{`
+          @import 'theme';
+
           span {
             display: inline-flex;
             border-radius: 3.75em;
-            background-color: ${theme.infoBg};
-            color: ${theme.infoBorder};
+            background-color: $infoBg;
+            color: $infoBorder;
             font-size: .75em;
             line-height: 1;
             padding: .4em 1.2em;
@@ -37,14 +37,14 @@ class Info extends React.Component {
 
           span.valid {
             padding: .4em .5em;
-            background-color: ${theme.successBg};
-            color: ${theme.successBorder};
+            background-color: $successBg;
+            color: $successBorder;
           }
 
           span.invalid {
             padding: .4em .5em;
-            background-color: ${theme.errorBg};
-            color: ${theme.errorBorder};
+            background-color: $errorBg;
+            color: $errorBorder;
           }
           `}</style>
       </div>

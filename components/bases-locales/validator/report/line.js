@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 import LineValue from './line-value'
 
 const Line = ({line, onHover}) => {
@@ -23,6 +21,8 @@ const Line = ({line, onHover}) => {
         </tbody>
       </table>
       <style jsx>{`
+        @import 'theme';
+
         .container {
           margin: 1em 0;
           overflow-x:auto;
@@ -40,7 +40,7 @@ const Line = ({line, onHover}) => {
         }
 
         tr:nth-child(2n) {
-          background-color: ${theme.backgroundGrey};
+          background-color: $backgroundGrey;
         }
         `}</style>
     </div>

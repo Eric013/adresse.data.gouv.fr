@@ -8,7 +8,6 @@ import FaHome from 'react-icons/lib/fa/home'
 import {getTypeByPriority} from '../../../lib/types'
 
 import Tag from '../../tag'
-import theme from '../../../styles/theme'
 
 const Infos = ({voie}) => (
   <div className='voie-infos'>
@@ -46,12 +45,15 @@ const Infos = ({voie}) => (
       <div>{voie.codeVoie}</div>
     </div>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .voie-infos {
         display: grid;
         text-align: center;
         grid-template-columns: repeat(4, 1fr);
-        background-color: ${theme.primary};
-        color: ${theme.colors.white};
+        background-color: $primary;
+        color: $white;
         margin-top: -1em;
         padding: 1em 2em;
       }

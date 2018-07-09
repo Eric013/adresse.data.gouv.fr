@@ -5,9 +5,14 @@ import {withRouter} from 'next/router'
 import piwik from '../lib/piwik'
 
 import Meta from '../components/meta'
-import MainStyle from '../components/main-style'
 import Header from '../components/header'
 import Footer from '../components/footer'
+
+const Reset = () => (
+  <style jsx global>{`
+    @import 'reset';
+  `}</style>
+)
 
 class Layout extends React.Component {
   componentDidMount() {
@@ -24,11 +29,13 @@ class Layout extends React.Component {
     return (
       <div>
         <Meta title={title} description={description} />
-        <MainStyle />
+        <Reset />
         <Header />
+
         <main>
           {children}
         </main>
+
         {showFooter && <Footer />}
 
         <style jsx>{`

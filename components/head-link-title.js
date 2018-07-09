@@ -1,8 +1,6 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-import theme from '../styles/theme'
-
 const HeadLinkTitle = ({title, subtitle, href, icon}) => {
   return (
     <div className='data'>
@@ -15,8 +13,10 @@ const HeadLinkTitle = ({title, subtitle, href, icon}) => {
       </div>
 
       <style jsx>{`
+        @import 'theme';
+
         a {
-          color: ${theme.darkText};
+          color: $darkText;
           text-decoration: underline;
         }
 

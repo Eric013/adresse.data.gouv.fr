@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 const Hero = ({title, tagline}) => (
   <div className='hero'>
     <div className='hero__container'>
@@ -9,10 +7,13 @@ const Hero = ({title, tagline}) => (
       <p className='hero__white-background'>{tagline}</p>
     </div>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .hero {
         width: 100%;
-        color: ${theme.colors.white};
-        background-color: ${theme.backgroundWhite};
+        color: $white;
+        background-color: $backgroundWhite;
         background-blend-mode: darken;
         background-image: url(/static/images/background.png);
         background-size: cover;
@@ -32,17 +33,17 @@ const Hero = ({title, tagline}) => (
 
       .hero__white-background {
         padding: 10px 1em;
-        background-color: ${theme.colors.white};
+        background-color: $white;
       }
 
       .hero h1 {
-        color: ${theme.darkText};
+        color: $darkText;
         margin: 0;
       }
 
       .hero p {
         margin: 1em 0 0;
-        color: ${theme.darkText};
+        color: $darkText;
         font-size: 1.2em;
         font-style: italic;
       }

@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FaAngleRight from 'react-icons/lib/fa/angle-right'
 
-import theme from '../../../../styles/theme'
-
 class Item extends React.Component {
   static propTypes = {
     id: PropTypes.string.isRequired,
@@ -29,6 +27,9 @@ class Item extends React.Component {
         </div>
         <div className='link'>{link && <FaAngleRight />}</div>
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .container {
             width: 100;
             display: flex;
@@ -39,7 +40,7 @@ class Item extends React.Component {
             display: flex;
             justify-content: space-between;
             align-item: center;
-            border: 1px solid ${theme.border};
+            border: 1px solid $border;
             padding: 1em;
             margin: 0.2em 0;
           }
@@ -56,8 +57,8 @@ class Item extends React.Component {
 
           .selectable:hover {
             cursor: pointer;
-            color: ${theme.colors.white};
-            background-color: ${theme.primary};
+            color: $white;
+            background-color: $primary;
           }
 
           .link {

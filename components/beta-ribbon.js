@@ -1,5 +1,3 @@
-import theme from '../styles/theme'
-
 const BetaRibbon = () => (
   <div className='ribbon'>
     <style jsx>{`
@@ -9,14 +7,14 @@ const BetaRibbon = () => (
         position: absolute;
         width: 50px;
         height: 20px;
-        background-color: ${theme.colors.white};
+        background-color: $white;
         top: 25px;
         right: 0;
         text-align: center;
         font-size: 13px;
         text-transform: uppercase;
         font-weight: bold;
-        color: ${theme.primary};
+        color: $primary;
         line-height: 20px;
         box-shadow: 0 3px 10px -5px #C9D3DF;
         -ms-transform:rotate(45deg);

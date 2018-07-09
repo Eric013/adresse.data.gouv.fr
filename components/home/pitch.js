@@ -1,7 +1,5 @@
 import Section from '../section'
 
-import theme from '../../styles/theme'
-
 export default () => (
   <Section
     background='dark'>
@@ -11,17 +9,19 @@ export default () => (
       </p>
     </div>
     <style jsx>{`
+      @import 'colors';
+
       .pitch {
-        color: ${theme.colors.grey};
+        color: $grey;
         text-align: center;
         font-size: 1.2em;
         line-height: 1.2em;
       }
       .pitch strong {
-        color: ${theme.colors.white}
+        color: $white
       }
       .pitch a {
-        color: ${theme.colors.white};
+        color: $white;
         font-style: italic;
       }
       .pitch p {

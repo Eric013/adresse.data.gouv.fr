@@ -4,8 +4,6 @@ import {Source, Layer} from 'react-mapbox-gl'
 
 import {numerosToGeoJson} from '../../../../../../lib/geojson'
 
-import theme from '../../../../../../styles/theme'
-
 import MapboxGL from '../../../../../mapbox-gl'
 
 const circlePaint = {
@@ -15,7 +13,7 @@ const circlePaint = {
     base: 1.6,
     stops: [[12, 3], [22, 120]]
   },
-  'circle-color': theme.colors.white,
+  'circle-color': '#fff',
   'circle-opacity': 0.8
 }
 

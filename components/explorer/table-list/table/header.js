@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 const Header = ({title, sort, icon, actived}) => (
   <th onClick={sort}>
     <div className='order-by'>
@@ -12,8 +10,10 @@ const Header = ({title, sort, icon, actived}) => (
       </div>}
     </div>
     <style jsx>{`
+      @import 'theme';
+
       th {
-        border: 1px solid ${theme.border};
+        border: 1px solid $border;
         padding: 8px;
       }
 
@@ -25,8 +25,8 @@ const Header = ({title, sort, icon, actived}) => (
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: ${theme.primary};
-        color: white;
+        background-color: $primary;
+        color:$white
       }
 
       .order-by {
@@ -41,7 +41,7 @@ const Header = ({title, sort, icon, actived}) => (
       }
 
       .icon.active {
-        color: white;
+        color:$white
       }
 
       @media (max-width: 460px) {

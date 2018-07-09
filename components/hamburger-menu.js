@@ -5,8 +5,6 @@ import Link from 'next/link'
 import FaBars from 'react-icons/lib/md/menu'
 import FaClose from 'react-icons/lib/md/close'
 
-import theme from '../styles/theme'
-
 class HamburgerMenu extends React.Component {
   static propTypes = {
     links: PropTypes.arrayOf(PropTypes.shape({
@@ -48,6 +46,9 @@ class HamburgerMenu extends React.Component {
         )}
 
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .dropdown {
             position: relative;
             display: inline-block;
@@ -55,12 +56,12 @@ class HamburgerMenu extends React.Component {
           }
 
           a {
-            color: ${theme.colors.black};
+            color: $black;
           }
 
           .content {
             position: absolute;
-            background-color: ${theme.colors.white};
+            background-color: $white;
             padding: 1em;
             display: grid;
             grid-row-gap: 5px;
@@ -72,7 +73,7 @@ class HamburgerMenu extends React.Component {
           }
 
           .content div:hover {
-            background-color: ${theme.backgroundGrey};
+            background-color: $backgroundGrey;
           }
 
           @media (min-width: 552px) {
@@ -82,7 +83,7 @@ class HamburgerMenu extends React.Component {
             }
 
             a:hover {
-              background: ${theme.colors.lighterGrey};
+              background: $lighterGrey;
               transition: background ease-out 0.5s;
             }
           }

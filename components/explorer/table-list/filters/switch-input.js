@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 const SwitchInput = ({handleChange, label, isChecked}) => (
   <div className='container'>
     <label className='switch'>
@@ -10,6 +8,9 @@ const SwitchInput = ({handleChange, label, isChecked}) => (
     </label>
     <label>{label}</label>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .container {
         display: flex;
         align-items: center;
@@ -28,7 +29,9 @@ const SwitchInput = ({handleChange, label, isChecked}) => (
         height: 34px;
       }
 
-      .switch input {display:none;}
+      .switch input {
+        display:none;
+      }
 
       .slider {
         position: absolute;
@@ -49,17 +52,17 @@ const SwitchInput = ({handleChange, label, isChecked}) => (
         width: 26px;
         left: 4px;
         bottom: 4px;
-        background-color: white;
+        background-color: $white;
         -webkit-transition: .4s;
         transition: .4s;
       }
 
       input:checked + .slider {
-        background-color: ${theme.primary};
+        background-color: $primary;
       }
 
       input:focus + .slider {
-        box-shadow: 0 0 1px ${theme.primary};
+        box-shadow: 0 0 1px $primary;
       }
 
       input:checked + .slider:before {

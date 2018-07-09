@@ -1,7 +1,5 @@
 import Link from 'next/link'
 
-import theme from '../styles/theme'
-
 import HamburgerMenu from './hamburger-menu'
 
 const links = [
@@ -38,9 +36,12 @@ export default () => (
     </div>
 
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .nav {
-        border-bottom: 1px solid ${theme.boxShadow};
-        box-shadow: 0 1px 4px ${theme.boxShadow};
+        border-bottom: 1px solid $boxShadow;
+        box-shadow: 0 1px 4px $boxShadow;
         width: 100%;
         background: #fff;
         z-index: 100;
@@ -79,7 +80,7 @@ export default () => (
 
       .nav__links a,
       .nav__links .dropdown {
-        color: ${theme.colors.black};
+        color: $black;
         padding: 0.4em 0.8em;
         border-radius: 3px;
       }
@@ -90,13 +91,13 @@ export default () => (
 
       .nav__links a:hover,
       .nav__links .dropdown:hover {
-        background: ${theme.lightGrey};
+        background: $lightGrey;
         transition: background ease-out 0.5s;
       }
 
       .nav__links a.active {
-        background: ${theme.primary};
-        color: ${theme.colors.white};
+        background: $primary;
+        color: $white;
       }
 
       .hamburger-menu {

@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import theme from '../../../../styles/theme'
-
 import Fields from './fields'
 import CsvMeta from './csv-meta'
 import Rows from './rows'
@@ -36,11 +34,14 @@ class Report extends React.Component {
         </div>
 
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           .container {
             margin: 2em 0;
             padding: 2em 1em;
-            box-shadow: 0 1px 4px ${theme.boxShadow};
-            background: ${theme.colors.white};
+            box-shadow: 0 1px 4px $boxShadow;
+            background: $white;
           }
           .items {
             margin-bottom: 2em;

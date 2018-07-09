@@ -2,8 +2,6 @@ import PropTypes from 'prop-types'
 
 import FaQuestion from 'react-icons/lib/fa/question'
 
-import theme from '../../../../styles/theme'
-
 const UnknownFields = ({fields}) => (
   <div className='container'>
     {fields.length > 0 &&
@@ -21,8 +19,10 @@ const UnknownFields = ({fields}) => (
         </tbody>
       </table>}
     <style jsx>{`
+      @import 'theme';
+
       .unknown {
-        color: ${theme.colors.darkerGrey};
+        color: $darkerGrey;
       }
 
       th, td {
@@ -30,7 +30,7 @@ const UnknownFields = ({fields}) => (
       }
 
       tr:nth-child(2n) {
-        background-color: ${theme.backgroundGrey};
+        background-color: $backgroundGrey;
       }
 
       td:nth-child(2n) {

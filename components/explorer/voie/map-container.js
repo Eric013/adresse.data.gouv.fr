@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import dynamic from 'next/dynamic'
 import {union} from 'lodash'
 
-import theme from '../../../styles/theme'
 import {_get} from '../../../lib/fetch'
 
 import LoadingContent from '../../loading-content'
@@ -82,6 +81,8 @@ class MapContainer extends React.Component {
         }
 
         <style jsx>{`
+          @import 'theme';
+
           .container {
             display: flex;
             flex-flow: wrap;
@@ -101,7 +102,7 @@ class MapContainer extends React.Component {
             display: block;
             overflow: scroll;
             height: 500px;
-            box-shadow: 0 1px 4px ${theme.boxShadow};
+            box-shadow: 0 1px 4px $boxShadow;
           }
 
           @media (max-width: 900px) {
@@ -118,7 +119,7 @@ class MapContainer extends React.Component {
               width: 100%;
               height: 100%;
               padding: 0 2em;
-              box-shadow: 0 1px 4px ${theme.boxShadow};
+              box-shadow: 0 1px 4px $boxShadow;
             }
           }
         `}</style>

@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
 
-import theme from '../styles/theme'
-
 import Container from './container'
 
 const Head = ({children, title, icon}) => (
@@ -16,8 +14,11 @@ const Head = ({children, title, icon}) => (
       </div>
     </Container>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .head {
-        background-color: ${theme.backgroundColor};
+        background-color: $backgroundColor;
       }
 
       .row {
@@ -25,7 +26,7 @@ const Head = ({children, title, icon}) => (
         align-items: center;
         max-width: 1400px;
         margin-top: 0;
-        color: ${theme.colors.white};
+        color: $white;
         padding: 40px;
       }
 

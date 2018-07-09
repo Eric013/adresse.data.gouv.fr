@@ -1,5 +1,3 @@
-import theme from '../../styles/theme'
-
 const featuresTypes = {
   housenumber: 'numéro',
   street: 'rue',
@@ -20,6 +18,9 @@ function RenderAdresse(item, isHighlighted) {
       </div>
       <div>{featuresTypes[type]}</div>
       <style jsx>{`
+        @import 'theme';
+        @import 'colors';
+
         .item {
           display: flex;
           flex-flow: row;
@@ -37,8 +38,8 @@ function RenderAdresse(item, isHighlighted) {
         }
 
         .item-highlighted {
-          background-color: ${theme.primary};
-          color: ${theme.colors.white};
+          background-color: $primary;
+          color: $white;
         }
         `}</style>
     </div>

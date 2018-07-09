@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 
-import theme from '../../../styles/theme'
-
 import Summary from './summary'
 
 class BaseAdresseLocale extends React.Component {
@@ -33,9 +31,11 @@ class BaseAdresseLocale extends React.Component {
           error={error} />
 
         <style jsx>{`
+          @import 'theme';
+
           .container {
             padding: 0 2em;
-            border-left: 5px solid ${theme.primary};
+            border-left: 5px solid $primary;
           }
           `}</style>
       </div>

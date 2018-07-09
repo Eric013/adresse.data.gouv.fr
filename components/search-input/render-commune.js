@@ -1,5 +1,3 @@
-import theme from '../../styles/theme'
-
 function RenderCommune(item, isHighlighted) {
   const description = item.departement ? `${item.departement.nom} - ${item.departement.code}` : 'Collectivité d’outre-mer'
 
@@ -10,6 +8,9 @@ function RenderCommune(item, isHighlighted) {
       </div>
       <div>{description}</div>
       <style jsx>{`
+        @import 'theme';
+        @import 'colors';
+
         .item {
           display: flex;
           flex-flow: row;
@@ -28,8 +29,8 @@ function RenderCommune(item, isHighlighted) {
         }
 
         .item-highlighted {
-          background-color: ${theme.primary};
-          color: ${theme.colors.white};
+          background-color: $primary;
+          color: $white;
         }
       `}</style>
     </div>

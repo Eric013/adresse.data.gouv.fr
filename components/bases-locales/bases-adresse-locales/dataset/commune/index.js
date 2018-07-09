@@ -5,8 +5,6 @@ import {deburr} from 'lodash'
 
 import FaExclamationTriangle from 'react-icons/lib/fa/exclamation-triangle'
 
-import theme from '../../../../../styles/theme'
-
 import Section from '../../../../section'
 import Tag from '../../../../tag'
 
@@ -105,9 +103,12 @@ class Commune extends React.Component {
 
         <ProducerDiscussion page={page} />
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           h4 {
-            background-color: ${theme.primary};
-            color: ${theme.colors.white};
+            background-color: $primary;
+            color: $white;
             padding: 1em;
             margin-bottom: 0;
           }
@@ -128,7 +129,7 @@ class Commune extends React.Component {
           .namedPlace {
             display: flex;
             align-items: center;
-            color: ${theme.errorBorder};
+            color: $errorBorder;
             margin: 0 1em;
           }
 
@@ -155,6 +156,7 @@ class Commune extends React.Component {
             .namedPlace {
               margin: 0;
             }
+          }
         `}</style>
       </div>
     )

@@ -7,8 +7,6 @@ import FaClose from 'react-icons/lib/fa/close'
 
 import {getErrorMsg} from '../lib/error'
 
-import theme from '../styles/theme'
-
 const types = {
   info: {icon: <FaLightbulbO />, title: 'Bon à savoir'},
   success: {icon: <FaCheck />, title: 'Réussi'},
@@ -21,6 +19,8 @@ const Notification = ({message, type, style, children}) => (
     <h4><div className='icon'>{types[type].icon}</div> {types[type].title}</h4>
     {children || (type === 'error' ? getErrorMsg(message) : message)}
     <style jsx>{`
+      @import 'theme';
+
       h4 {
         margin: 0.6em 0;
         display: flex;
@@ -28,31 +28,31 @@ const Notification = ({message, type, style, children}) => (
       }
 
       .notification {
-        color: ${theme.infoBorder};
-        background: ${theme.infoBg};
-        border: 1px solid ${theme.infoBorder};
-        border-radius: ${theme.borderRadius};
+        color: $infoBorder;
+        background: $infoBg;
+        border: 1px solid $infoBorder;
+        border-radius: $borderRadius;
         padding: 1em;
         margin-bottom: 1em;
         position: relative;
       }
 
       .notification.success {
-        color: ${theme.successBorder};
-        background: ${theme.successBg};
-        border: 1px solid ${theme.successBorder};
+        color: $successBorder;
+        background: $successBg;
+        border: 1px solid $successBorder;
       }
 
       .notification.warning {
-        color: ${theme.warningBorder};
-        background: ${theme.warningBg};
-        border: 1px solid ${theme.warningBorder};
+        color: $warningBorder;
+        background: $warningBg;
+        border: 1px solid $warningBorder;
       }
 
       .notification.error {
-        color: ${theme.errorBorder};
-        background: ${theme.errorBg};
-        border: 1px solid ${theme.errorBorder};
+        color: $errorBorder;
+        background: $errorBg;
+        border: 1px solid $errorBorder;
       }
 
       .icon {

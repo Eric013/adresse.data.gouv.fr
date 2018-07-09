@@ -4,8 +4,6 @@ import Link from 'next/link'
 import FaCheck from 'react-icons/lib/fa/check'
 import FaClose from 'react-icons/lib/fa/close'
 
-import theme from '../../../styles/theme'
-
 import Info from './info'
 
 class InfoReport extends React.Component {
@@ -37,12 +35,14 @@ class InfoReport extends React.Component {
             </div>
           }
           <style jsx>{`
+            @import 'theme';
+
             .info-report {
               margin-left: 0.2em;
             }
 
             .error {
-              text-color: ${theme.errorBg};
+              text-color: $errorBg;
             }
         `}</style>
         </div>

@@ -1,5 +1,4 @@
 /* eslint react/no-unescaped-entities: off */
-import theme from '../styles/theme'
 
 import Section from './section'
 
@@ -139,8 +138,11 @@ const Api = () => (
     </div>
 
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .entrypoint + .entrypoint {
-        border-top: 1px solid ${theme.borderLighter};
+        border-top: 1px solid $borderLighter;
       }
 
       .row {
@@ -151,17 +153,17 @@ const Api = () => (
       }
 
       .details {
-        background-color: ${theme.colors.almostBlack};
-        color: ${theme.colors.white};
-        padding: 40px;
-        border: 1px solid ${theme.darkGrey};
-        border-radius: ${theme.borderRadius};
-        box-shadow: 0 1px 4px 0 ${theme.boxShadow};
+        background-color: $almostBlack;
+        color: $white;
+        padding: 1em;
+        border: 1px solid $darkGrey;
+        border-radius: $borderRadius;
+        box-shadow: 0 1px 4px 0 $boxShadow;
         width: 100%;
       }
 
       .details code {
-        color: ${theme.darkText};
+        color: $darkText;
       }
 
       @media (min-width: 900px) {
@@ -171,6 +173,7 @@ const Api = () => (
 
         .details {
           width: 70%;
+          padding: 40px;
         }
 
         .description {

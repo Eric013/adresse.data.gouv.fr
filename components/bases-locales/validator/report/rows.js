@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import FaCheck from 'react-icons/lib/fa/check'
 
-import theme from '../../../../styles/theme'
-
 import Row from './row'
 
 class Rows extends React.Component {
@@ -18,8 +16,10 @@ class Rows extends React.Component {
           {rows.map(row => <Row key={`row-${row._line}`} row={row} />)}
         </div>
         <style jsx>{`
+            @import 'theme';
+
             .valid {
-              color: ${theme.successBorder};
+              color: $successBorder;
             }
             `}</style>
       </div>

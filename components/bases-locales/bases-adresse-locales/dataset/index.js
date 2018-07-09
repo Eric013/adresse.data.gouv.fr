@@ -4,8 +4,6 @@ import {withRouter} from 'next/router'
 import {deburr} from 'lodash'
 import MdFileDownload from 'react-icons/lib/md/file-download'
 
-import theme from '../../../../styles/theme'
-
 import Section from '../../../section'
 
 import ButtonLink from '../../../button-link'
@@ -88,9 +86,12 @@ class Dataset extends React.Component {
         <ProducerDiscussion page={page} />
 
         <style jsx>{`
+          @import 'theme';
+          @import 'colors';
+
           h4 {
-            background-color: ${theme.primary};
-            color: ${theme.colors.white};
+            background-color: $primary;
+            color: $white;
             padding: 1em;
             margin-bottom: 0;
           }
