@@ -20,6 +20,8 @@ class BasesAdresseLocales extends React.Component {
           ))}
         </div>
         <style jsx>{`
+          @import 'theme';
+
           .bases {
             display: grid;
             grid-row-gap: 2em;

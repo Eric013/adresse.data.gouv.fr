@@ -13,11 +13,13 @@ function renderHeader(header) {
     <div>
       <div key={header} className='header'>{featuresTypes[header]}</div>
       <style jsx>{`
-          .header {
-            background-color: $grey;
-            color: $white;
-            padding: 0.2em;
-          }
+        @import 'colors';
+
+        .header {
+          background-color: $grey;
+          color: $white;
+          padding: 0.2em;
+        }
         `}
       </style>
     </div>

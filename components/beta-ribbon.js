@@ -1,6 +1,9 @@
 const BetaRibbon = () => (
   <div className='ribbon'>
     <style jsx>{`
+      @import 'theme';
+      @import 'colors';
+
       .ribbon:after {
         content: "beta";
         display: inline-block;
