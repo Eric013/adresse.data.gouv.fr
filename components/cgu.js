@@ -52,7 +52,7 @@ const Cgu = () => (
       }
 
       .row > div:nth-child(2) {
-        width: 80%
+        width: 80%;
         margin-left: 3em;
       }
 
@@ -66,7 +66,7 @@ const Cgu = () => (
           margin-left: 0;
         }
       }
-      `}</style>
+    `}</style>
   </Section>
 )
 
