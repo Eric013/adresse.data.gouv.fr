@@ -1,0 +1,28 @@
+@import 'colors';
+
+$primary: $blue;
+$primaryLight: $lightBlue;
+$primaryDark: $darkBlue;
+$secondary: $blue;
+$secondaryDarken: $darkBlue;
+
+$border: $grey;
+$borderLighter: $lightGrey;
+$borderActive: $lightBlue;
+$borderRadius: 5px;
+
+$backgroundWhite: $white;
+$backgroundGrey: $lighterGrey;
+$backgroundColor: $blue;
+$backgroundDark: $black;
+$boxShadow: $lightGrey;
+$darkText: $almostBlack;
+
+$successBorder: $green;
+$successBg: $lightGreen;
+$warningBorder: $orange;
+$warningBg: $lightOrange;
+$errorBorder: $red;
+$errorBg: $lightRed;
+$infoBorder: $blue;
+$infoBg: $lighterBlue;
