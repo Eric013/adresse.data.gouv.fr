@@ -6,8 +6,28 @@
       }
     ]
   ],
+
   "presets": [
-    "next/babel"
+    [
+      "next/babel",
+      {
+        "styled-jsx": {
+          "plugins": [
+            [
+              "styled-jsx-plugin-sass",
+              {
+                "sassOptions": {
+                  "includePaths": [
+                    "styles"
+                  ],
+                  "precision": 2
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ]
   ],
 
   "env": {
