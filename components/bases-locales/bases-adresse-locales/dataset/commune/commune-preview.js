@@ -14,7 +14,7 @@ class CommunesPreview extends React.Component {
       source: PropTypes.array.isRequired,
       voiesCount: PropTypes.number.isRequired,
       numerosCount: PropTypes.number.isRequired,
-      population: PropTypes.number.isRequired,
+      population: PropTypes.number,
       contour: PropTypes.object
     }).isRequired
   }
@@ -27,7 +27,7 @@ class CommunesPreview extends React.Component {
       {title: 'Dernière mise à jour', value: dateMAJ || 'inconnue'},
       {title: 'Nombre de Voies', value: spaceThousands(voiesCount)},
       {title: 'Nombre d’adresses', value: spaceThousands(numerosCount)},
-      {title: 'Habitants', value: spaceThousands(population)}
+      {title: 'Habitants', value: population ? spaceThousands(population) : 'Non renseigné'}
     ]
   }
 
