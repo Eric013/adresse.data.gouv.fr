@@ -1,40 +1,91 @@
 {
   "plugins": [
     [
-      "inline-import", {
-        "extensions": [".css"]
-      }
-    ]
-  ],
-
-  "presets": [
-    [
-      "next/babel",
+      "inline-import",
       {
-        "styled-jsx": {
-          "plugins": [
-            [
-              "styled-jsx-plugin-sass",
-              {
-                "sassOptions": {
-                  "includePaths": [
-                    "styles"
-                  ],
-                  "precision": 2
-                }
-              }
-            ]
-          ]
-        }
+        "extensions": [
+          ".css"
+        ]
       }
     ]
   ],
 
   "env": {
+    "production": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "styled-jsx": {
+              "plugins": [
+                [
+                  "styled-jsx-plugin-sass",
+                  {
+                    "sassOptions": {
+                      "includePaths": [
+                        "styles"
+                      ],
+                      "precision": 2
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      ]
+    },
+
+    "development": {
+      "presets": [
+        [
+          "next/babel",
+          {
+            "styled-jsx": {
+              "plugins": [
+                [
+                  "styled-jsx-plugin-sass",
+                  {
+                    "sassOptions": {
+                      "includePaths": [
+                        "styles"
+                      ],
+                      "precision": 2
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
+      ]
+    },
+
     "test": {
       "presets": [
-        ["env", { "modules": "commonjs" }],
-        "next/babel"
+        [
+          "next/babel",
+          {
+            "preset-env": {
+              "modules": "commonjs"
+            },
+            "styled-jsx": {
+              "plugins": [
+                [
+                  "styled-jsx-plugin-sass",
+                  {
+                    "sassOptions": {
+                      "includePaths": [
+                        "styles"
+                      ],
+                      "precision": 2
+                    }
+                  }
+                ]
+              ]
+            }
+          }
+        ]
       ]
     }
   }
